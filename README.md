@@ -1,5 +1,7 @@
 # ML_DataPreparation
 
+# Introduction
+
 ## To start project:
 
 ````
@@ -22,3 +24,8 @@ deactivate
 pip install dependency
 pip freeze > requirements.txt
 ````
+
+
+
+#############TAKEOFF
+- Talk about normalization and standarization

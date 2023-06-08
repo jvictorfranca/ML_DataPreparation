@@ -18,7 +18,6 @@ print(mask_logic)
 filtered_with_logic = students.loc[mask_logic, :]
 print(filtered_with_logic)
 
-
 # Remove every row with null values in it
 students_every_row_null = students.dropna()
 print(students_every_row_null)
