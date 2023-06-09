@@ -1,6 +1,3 @@
-#Remove HTML files of plotly view.
-*_px.html
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

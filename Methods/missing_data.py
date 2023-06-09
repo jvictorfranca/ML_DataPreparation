@@ -39,7 +39,7 @@ students_filled_gender = students.fillna({'Gender':'Female'})
 print(students_filled_gender)
 
 # Fill null values with mean: Gets the column mean
-students_age_mean = students = students.fillna({'Age':students['Age'].mean()})
+students_age_mean = students.fillna({'Age':students['Age'].mean()})
 
 # Fill null values with median: Gets the column median:
-students_age_median = students = students.fillna({'Age':students['Age'].median()})
+students_age_median = students.fillna({'Age':students['Age'].median()})
