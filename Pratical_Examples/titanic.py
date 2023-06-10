@@ -1,3 +1,4 @@
+from sklearn.model_selection import train_test_split
 import pandas as pd
 import numpy as np
 
@@ -53,6 +54,34 @@ print(titanic.head())
 #Save as treated
 
 titanic.to_csv('Treated_Datasets/titanic_treated.csv', index=False)
+
+## Split data in training, evaluation and test; and save as CSV
+
+    # Get features (X) and labels (y) datas
+
+features = titanic.drop('Survived', axis=1)
+labels = titanic['Survived']
+
+    # Split in train and test (with 40% of the data on the test )
+
+X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.4, random_state=42)
+
+    # Split test again, now to get test and validation groups. 
+
+X_val, X_test, y_val, y_test = train_test_split(X_test, y_test, test_size=0.5, random_state=42)
+
+for dataset in [y_train, y_val, y_test]:
+    print(round(len(dataset) / len(labels), 2))
+
+    # Save on many CSVs
+
+X_train.to_csv('Treated_Datasets/Splited/titanic/train_features.csv', index=False)
+X_val.to_csv('Treated_Datasets/Splited/titanic/val_features.csv', index=False)
+X_test.to_csv('Treated_Datasets/Splited/titanic/test_features.csv', index=False)
+
+y_train.to_csv('Treated_Datasets/Splited/titanic/train_labels.csv', index=False)
+y_val.to_csv('Treated_Datasets/Splited/titanic/val_labels.csv', index=False)
+y_test.to_csv('Treated_Datasets/Splited/titanic/test_labels.csv', index=False)
 
 
 
