@@ -45,9 +45,9 @@ This repository will use dependencies to generate plots, and their documentation
 ````
 python -m venv venv
 
-pip install -r requirements.txt
-
 .\venv\Scripts\Activate.ps1
+
+pip install -r requirements.txt
 ````
 
 ## To exit virtual environment:
